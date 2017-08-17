@@ -81,7 +81,7 @@ Upload these 3 files to the [`editors`](editors/) folder.
 
 What terminal editor will be your preferred choice of use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Vim is the editor that I prefer to use. I've used vim all throughout school, so I'm pretty comfortable using it.
 
 --
 
@@ -89,6 +89,6 @@ What terminal editor will be your preferred choice of use? How did you make your
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> The graphical editor I chose was PyCharm. I've used other JetBrains IDEs before and enjoy features such as the debugger, syntax suggestions, and the possible integration with version control. Some helpful shortcuts that I use a lot are double-pressing Shift and Command +/-. Double-pressing Shift is general search, which can come in handy when projects get really large. Command+ or Command- expands or collapses code fragments. This can help get rid of a lot of clutter on the screen, making it easier to work on certain code fragments.
 
  
