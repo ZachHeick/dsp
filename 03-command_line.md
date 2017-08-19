@@ -34,8 +34,13 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > *Lists all files in a directory *Lists all files in a directory including hidden files *Displays the long format listing of files 
+> > *Lists all files in a directory 
+*Lists all files in a directory including hidden files 
+*Displays the long format listing of files 
 *Displays the long forat listing of files that include the file sizes with prefix
+*Displays the long format listing of files including hidden files with file sizes and prefixes
+*Displays newest files first based on timestamp
+*Displays the long format listing of files that are highlighted and include "/" at the end of each filename
 
 ---
 
