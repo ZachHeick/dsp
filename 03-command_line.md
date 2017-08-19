@@ -34,7 +34,8 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > *Lists all files in a directory *Lists all files in a directory including hidden files *Displays the long format listing of files 
+*Displays the long forat listing of files that include the file sizes with prefix
 
 ---
 
@@ -42,7 +43,7 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > *
 
 ---
 
@@ -50,7 +51,7 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > `xargs` takes filenames from standart out and uses them as arguments. `xargs` can also parallel process jobs.
 
  
 
