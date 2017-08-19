@@ -34,13 +34,7 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > * Lists all files in a directory 
-* Lists all files in a directory including hidden files 
-* Displays the long format listing of files 
-* Displays the long forat listing of files that include the file sizes with prefix
-* Displays the long format listing of files including hidden files with file sizes and prefixes
-* Displays newest files first based on timestamp
-* Displays the long format listing of files that are highlighted and include "/" at the end of each filename
+> > * Lists all files in a directory * Lists all files in a directory including hidden files * Displays the long format listing of files * Displays the long forat listing of files that include the file sizes with prefix * Displays the long format listing of files including hidden files with file sizes and prefixes * Displays newest files first based on timestamp * Displays the long format listing of files that are highlighted and include "/" at the end of each filename
 
 ---
 
@@ -49,10 +43,10 @@ What do the following commands do:
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
 > > * `ls -m`
-* `ls -r` 
-* `ls -u`
-* `ls -1`
-* `ls -n`
+> > * `ls -r` 
+> > * `ls -u`
+> > * `ls -1`
+> > * `ls -n`
 
 ---
 
