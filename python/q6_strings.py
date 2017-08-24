@@ -1,6 +1,6 @@
 # Based on materials copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
-
+import re
 
 def donuts(count):
     """
@@ -18,7 +18,7 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+    return 'Number of donuts: ' + str(count) if count < 10 else 'many'
 
 
 def both_ends(s):
@@ -37,7 +37,10 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    if len(s) < 2:
+        return ''
+
+    return s[:2] + s[-2:]
 
 
 def fix_start(s):
@@ -56,7 +59,13 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    first_char = s[0]
+    l_s = list(s)
+    for i in range(1,len(s)):
+        curr_char = l_s[i]
+        if curr_char == first_char:
+            l_s[i] = '*'
+    return ''.join(l_s)
 
 
 def mix_up(a, b):
@@ -74,7 +83,9 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    new_a = b[:2] + a[2:]
+    new_b = a[:2] + b[2:]
+    return new_a + ' ' + new_b
 
 
 def verbing(s):
@@ -91,7 +102,11 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    if len(s) < 3:
+        return s
+    if s[-3:] == 'ing':
+        return s + 'ly'
+    return s + 'ing'
 
 
 def not_bad(s):
@@ -111,7 +126,17 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+    l_s = re.findall(r"[[\w']+|[.,!?;]", s)
+    print(l_s)
+    try:
+        not_index = l_s.index('not')
+        bad_index = l_s.index('bad')
+        print(not_index, bad_index)
+        if bad_index < not_index:
+            return s
+        return ' '.join(l_s[:not_index] + ['good'] + l_s[bad_index+1:])
+    except ValueError:
+        return s
 
 
 def front_back(a, b):
@@ -130,4 +155,10 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    a_front = a[:round((len(a)+1)/2)] if len(a) >= 3 else a[0]
+    a_back = a[round((len(a)+1)/2):] if len(a) >= 3 else a[1]
+
+    b_front = b[:round((len(b)+1) / 2)] if len(b) >= 3 else b[0]
+    b_back = b[round((len(b)+1) / 2):] if len(b) >= 3 else b[1]
+
+    return a_front + b_front + a_back + b_back
