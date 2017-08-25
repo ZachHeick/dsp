@@ -32,12 +32,12 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 ```python
 sorted(tuples_list, key=lambda i: i[1]))  
 ```
-Another reason to use `lamda` is it can rewrite blocks of statements into a single line expression . If we want to write a function that adds two numbers:
+>> Another reason to use `lambda` is it can rewrite blocks of statements into a single line expression . If we want to write a function that adds two numbers:
 ```python
 def my_add(x,y):
     return x + y
 ```
-This can be written in one line with a `lambda` function.
+>> This can be written in one line with a `lambda` function.
 ```python
 f = lambda x, y: x+y
 ```
@@ -51,7 +51,7 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 ```python
 l = [i**2 for i in range(1,11)]
 ```
-Equivalents `map` and `filter`:
+>> Equivalents `map` and `filter`:
 ```python
 l = map(lambda i: i**2, range(1,11))
 ```
@@ -59,7 +59,16 @@ l = map(lambda i: i**2, range(1,11))
 import math
 l = filter(lambda i: math.sqrt(i) - int(math.sqrt(i)) == 0, range(1,101))
 ```
+>> List comprehension is always preferred in Python, but if the comprehension gets too long/complicated, then using `map` or `filter` would be more appropriate.
 
+>> Set comprehension, same as the list example above:
+```python
+s = {i**2 for i in range(1,11)}
+```
+>> Creating a dictionary of numeric keys and empty list values using comprehension:
+```python
+d = {key:[] for key in range(10)}
+``` 
 
 ---
 
