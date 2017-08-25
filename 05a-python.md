@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Both lists and tuples are sequences of objects that both maintain order of elements. A key difference is that lists can be changed while tuples cannot. Because of this, tuples can be used as keys in dictionaries and lists cannot.
 
 ---
 
@@ -20,7 +20,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Both lists and sets are sequences of objects. One difference is that lists maintain order, but sets do not. Another difference is that there can be no duplicate objects in a set, where a list can. When searching for an element is list vs. a set, performance is faster for sets. This is because when searching for an item in a list, each item in that list needs to be compared for equality which is linear time. A set however uses a hash table, which has constant lookup time.
 
 ---
 
@@ -28,8 +28,10 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
+>> 'lambda' in Python is function created at runtime that does not require a name. It can be useful when sorting or searching through sequences of objects as a parameter. If we want to sort a list of tuples by last element, we could use a `lambda` function as a parameter. For example
+```python
+sorted(tuples_list, key=lambda i: i[1]))  
+```
 ---
 
 ### Q4. List Comprehension, Map &amp; Filter
