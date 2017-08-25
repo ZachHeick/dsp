@@ -20,7 +20,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> Both lists and sets are sequences of objects. One difference is that lists maintain order, but sets do not. Another difference is that there can be no duplicate objects in a set, where a list can. When searching for an element is list vs. a set, performance is faster for sets. This is because when searching for an item in a list, each item in that list needs to be compared for equality which is linear time. A set however uses a hash table, which has constant lookup time.
+>> Both lists and sets are sequences of objects. One difference is that lists maintain order, but sets do not. Another difference is that there can be no duplicate objects in a set, where a list can have duplicates. When searching for an element in a list versus a set, performance is faster for sets. This is because when searching for an item in a list, each item in that list needs to be compared for equality, which is done in linear time. A set, however, uses a hash table. A hash table has constant lookup time and is faster than linear time.
 
 ---
 
@@ -30,7 +30,7 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 >> `lambda` in Python is function created at runtime that does not require a name. It can be useful when sorting or searching through different data structures of objects as a parameter. If we want to sort a list of tuples by last element, we could use a `lambda` function as a parameter. For example:
 ```python
-sorted(tuples_list, key=lambda i: i[1]))  
+l = sorted(tuples_list, key=lambda i: i[1]))  
 ```
 >> Another reason to use `lambda` is it can rewrite blocks of statements into a single line expression . If we want to write a function that adds two numbers:
 ```python
@@ -41,6 +41,7 @@ def my_add(x,y):
 ```python
 f = lambda x, y: x+y
 ```
+
 ---
 
 ### Q4. List Comprehension, Map &amp; Filter
@@ -53,11 +54,10 @@ l = [i**2 for i in range(1,11)]
 ```
 >> Equivalents `map` and `filter`:
 ```python
-l = map(lambda i: i**2, range(1,11))
-```
-```python
 import math
-l = filter(lambda i: math.sqrt(i) - int(math.sqrt(i)) == 0, range(1,101))
+
+m = map(lambda i: i**2, range(1,11))
+f = filter(lambda i: math.sqrt(i) - int(math.sqrt(i)) == 0, range(1,101))
 ```
 >> List comprehension is always preferred in Python, but if the comprehension gets too long/complicated, then using `map` or `filter` would be more appropriate.
 
