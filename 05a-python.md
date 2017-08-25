@@ -28,9 +28,18 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> 'lambda' in Python is function created at runtime that does not require a name. It can be useful when sorting or searching through sequences of objects as a parameter. If we want to sort a list of tuples by last element, we could use a `lambda` function as a parameter. For example
+>> `lambda` in Python is function created at runtime that does not require a name. It can be useful when sorting or searching through different data structures of objects as a parameter. If we want to sort a list of tuples by last element, we could use a `lambda` function as a parameter. For example:
 ```python
 sorted(tuples_list, key=lambda i: i[1]))  
+```
+Another reason to use `lamda` is it can rewrite blocks of statements into a single line expression . If we want to write a function that adds two numbers:
+```python
+def my_add(x,y):
+    return x + y
+```
+This can be written in one line with a `lambda` function.
+```python
+f = lambda x, y: x+y
 ```
 ---
 
@@ -38,7 +47,19 @@ sorted(tuples_list, key=lambda i: i[1]))
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions are a way to construct lists in an easy one line way in Python. We can use this to create a list of squaring the numbers between 1 and 10:
+```python
+l = [i**2 for i in range(1,11)]
+```
+Equivalents `map` and `filter`:
+```python
+l = map(lambda i: i**2, range(1,11))
+```
+```python
+import math
+l = filter(lambda i: math.sqrt(i) - int(math.sqrt(i)) == 0, range(1,101))
+```
+
 
 ---
 
