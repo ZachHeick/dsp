@@ -12,15 +12,13 @@ with open('football.csv') as f:
 
     min_diff = float('inf')
     min_team = ''
-    teams = {}
 
     for row in csv_reader:
-        teams[row[0]] = [int(row[5]), int(row[6])]
-
-    for key, val in teams.items():
-        diff = abs(val[0] - val[1])
+        goals_for = int(row[5])
+        goals_against = int(row[6])
+        diff = abs(goals_for - goals_against)
         if diff < min_diff:
-            min_team = key
+            min_team = row[0]
             min_diff = diff
 
     print(min_team, min_diff)

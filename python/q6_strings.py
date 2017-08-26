@@ -1,6 +1,7 @@
 # Based on materials copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 import re
+from math import *
 
 def donuts(count):
     """
@@ -127,14 +128,18 @@ def not_bad(s):
     "It's bad yet not"
     """
     l_s = re.findall(r"[[\w']+|[.,!?;]", s)
-    print(l_s)
     try:
         not_index = l_s.index('not')
         bad_index = l_s.index('bad')
-        print(not_index, bad_index)
         if bad_index < not_index:
             return s
-        return ' '.join(l_s[:not_index] + ['good'] + l_s[bad_index+1:])
+        new_s = l_s[:not_index] + ['good'] + l_s[bad_index + 1:]
+        if new_s[-1] in '.,!?;':
+            last_word = new_s[-2]
+            punc = new_s[-1]
+            new_s = new_s[:-2]
+            new_s.append(last_word + punc)
+        return ' '.join(new_s)
     except ValueError:
         return s
 
@@ -155,10 +160,18 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    a_front = a[:round((len(a)+1)/2)] if len(a) >= 3 else a[0]
-    a_back = a[round((len(a)+1)/2):] if len(a) >= 3 else a[1]
+    if len(a) % 2 == 0:
+        a_front = a[:int(len(a)/2)]
+        a_back = a[int(len(a)/2):]
+    else:
+        a_front = a[:ceil(len(a)/2)]
+        a_back = a[ceil(len(a)/2):]
 
-    b_front = b[:round((len(b)+1) / 2)] if len(b) >= 3 else b[0]
-    b_back = b[round((len(b)+1) / 2):] if len(b) >= 3 else b[1]
+    if len(b) % 2 == 0:
+        b_front = b[:int(len(b)/2)]
+        b_back = b[int(len(b)/2):]
+    else:
+        b_front = b[:ceil(len(b)/2)]
+        b_back = b[ceil(len(b)/2):]
 
     return a_front + b_front + a_back + b_back
