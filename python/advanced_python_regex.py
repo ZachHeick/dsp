@@ -35,4 +35,5 @@ with open('faculty.csv') as f:
 
     print(list(email_domains))
 
+    f.close()
 
