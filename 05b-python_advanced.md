@@ -20,8 +20,8 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 #### Q1. Find how many different degrees there are, and their frequencies: Ex:  PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
 
 >> ```python
-d = {'ScD': 6, 'PhD': 31, 'MD': 1, 'MPH': 2, 'BSEd': 1, 'MS': 2, 'JD': 1, 'MA': 1, '0': 1}
-```
+>> d = {'ScD': 6, 'PhD': 31, 'MD': 1, 'MPH': 2, 'BSEd': 1, 'MS': 2, 'JD': 1, 'MA': 1, '0': 1}
+>> ```
 
 
 #### Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
