@@ -11,7 +11,8 @@ with open('faculty.csv') as f:
 
     for row in csv_reader:
         degrees = [deg.replace('.', '') for deg in row[1].split()]
-        title = row[2].split()[0]
+        split_title = row[2].split()
+        title = ' '.join(split_title[:split_title.index('Professor')+1])
         emails.append(row[3])
 
         for deg in degrees:
