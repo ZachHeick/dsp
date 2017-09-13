@@ -16,7 +16,7 @@
 >> thinkplot.Config(xlabel='Random Number', ylabel='Pmf')
 >> thinkplot.Show()
 >> ```
->> ![Pmf Graph](://github.com/ZachHeick/dsp/blob/master/statistics/4_2_pmf.png)
+>> ![Pmf Graph](https://github.com/ZachHeick/dsp/blob/master/statistics/4_2_pmf.png)
 >>
 >> Creating and plotting Cdf.
 >> ```python
