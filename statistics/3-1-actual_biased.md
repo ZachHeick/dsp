@@ -34,10 +34,11 @@
 >> thinkplot.Show()
 >> ```
 >> ![graph](https://github.com/ZachHeick/dsp/blob/master/statistics/3_1_graph.png)
+>>
 >> Calculating means.
 >> ```python
 >> pmf_mean = actual_pmf.Mean()
 >> biased_pmf_mean = biased_pmf.Mean()
 >> print(pmf_mean, biased_pmf_mean)
 >> ```
->> The actual distribution mean is 
+>> The actual distribution mean is 1.0242 and the biased distribution mean is 2.4037. 
