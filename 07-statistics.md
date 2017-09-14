@@ -101,7 +101,7 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Frequentist statistics views experiments and models as infinetly repeatable and parameters for these experiments and models are more strict. Bayesian statistics parameters are not as strict; the state of a model can be updated based on historical data. Bayesian statistics parameters are also described probabilistically where frequentist statistics' parameters remain constant. 
 
 ---
 
