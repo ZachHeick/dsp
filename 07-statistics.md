@@ -88,7 +88,12 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 
 >> Let's define our variables. Define *F* for fraternal twins and *I* for identical twins. The probabilities in the population can be represented as *P(F)* = 1/125 and *P(I)* = 1/300. Since Elvis is a male and he had a twin brother, we only care about male-male sets of twins. Define male-male sets as *M*. We can now set up our problem as *P(I|M)* and can use Bayes's Theorem to solve.
 >>
->> Expanding with Bayes's Theorem: *P(I|M)* = *P(M|I)P(I)*/*P(K)* 
+>> Expanding with Bayes's Theorem: *P(I|M)* = (*P(M|I)P(I)*) / (*P(K)*) = (*P(M|I)P(I)*) / (*P(M|I)P(I)*+*P(M|F)P(F)*) 
+>>
+>> We can solve both *P(M|I)* and *P(M|F)* if we think about it in terms of sets of twins and the genders. For identical twins, to be considered identical both twins need to have the same gender, so identical twins are either male-male or female-female. Therefore *P(M|I)* = 1/2. Fraternal twins do not necessarily need match genders. Fraternal twins can be male-male, female-female, male-female, or female-male, and therefore *P(M|F)* = 1/4.
+>>
+>> Plugging everything in: *P(I|M)* = ((1/2)(1/300)) / ((1/2)(1/300)+(1/4)(1/125)) = 5/11
+>> The probability that Elvis was an identical twin is 5/11 or ~45%.
 
 ---
 
